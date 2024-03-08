@@ -28,15 +28,13 @@ class Main {
 
         
         String messaggioCriptatoCesare = Crypto.Cesar(messaggio, kC);
-
-        System.out.println("Messaggio criptato:");
         String messaggioCriptato = Crypto.xorAlgo(messaggioCriptatoCesare, kXOR);
-        System.out.println(messaggioCriptato);
-        System.out.println("Messaggio decriptato:");
+        System.out.println("Messaggio criptato:"+messaggioCriptato);
+
 
         String messaggioDecriptatoXOR = Crypto.xorAlgo(messaggioCriptato, kXOR);
         String messaggioDecriptato = Crypto.Cesar(messaggioDecriptatoXOR, kC * (-1));
-        System.out.println(messaggioDecriptato);
+        System.out.println("Messaggio decriptato:"+ messaggioDecriptato);
 
     }
 }
